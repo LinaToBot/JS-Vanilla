@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 // modulo objeto donde vive nuestra configuracion de lo que va asuceder
 
 module.exports = {
+  mode: "production",
   entry: "./src/index.js", // todo nuestro codigo inicial
   // proyecto compilado y estructurado para mandar a prod
   output: {
@@ -24,7 +25,7 @@ module.exports = {
     rules: [
       {
         // estructura de babel, para esto debemos de generar un test para saber como vcamos a identificar estos archivos segun los que se encuentran en nuestro entorno.
-        test: /\.js?$/,
+        test: /\.m?js$/, //Nos permite identificar los archivos según se encuentran en nuestro entorno.
         // va a escruir todo lo que encuentre ahi de archivos js
         exclude: /node_modules/,
         // config preestablecida para trabajar topdo nuestro codigo
@@ -49,4 +50,3 @@ module.exports = {
     ]),
   ],
 };
-s;

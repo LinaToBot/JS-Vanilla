@@ -1,0 +1,6 @@
+// 1)Tras la actualizacion a webpack 5 debemos instalar las siguientes dependdencias de babel: "npm install @babel/core babel-loader @babel/preset-env".
+
+// 2)Luego debemos generar en la raiz del proyecto el archivo "babel.config.json" alli debemos agregar lo siguiente:
+{
+  "presets": ["@babel/preset-env"]
+}
