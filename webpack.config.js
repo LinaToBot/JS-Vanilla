@@ -3,6 +3,8 @@ const path = require("path");
 
 // Archivo necesario para trabajar con html.
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// first you have to install npm i copy-webpack-plugin --save-dev
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 // modulo objeto donde vive nuestra configuracion de lo que va asuceder
 
@@ -45,6 +47,9 @@ module.exports = {
       template: "./public/index.html",
       //dist es  hacia donde vamos a guardar el template y le podemos poner un nombre
       filename: "./index.html",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: "./src/styles/styles.css", to: "" }],
     }),
   ],
 };
