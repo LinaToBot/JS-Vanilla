@@ -38,15 +38,13 @@ module.exports = {
 
   plugins: [
     // permite trabajar con los archivos html
-    new HtmlWebpackPlugin([
-      {
-        // inyectar en un archivo html un valor
-        inject: true,
-        // templete base de html
-        template: "./public/index.html",
-        //dist es  hacia donde vamos a guardar el template y le podemos poner un nombre
-        filename: "./index.html",
-      },
-    ]),
+    new HtmlWebpackPlugin({
+      // inyectar en un archivo html un valor
+      inject: true,
+      // templete base de html
+      template: "./public/index.html",
+      //dist es  hacia donde vamos a guardar el template y le podemos poner un nombre
+      filename: "./index.html",
+    }),
   ],
 };

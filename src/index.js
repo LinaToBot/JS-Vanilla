@@ -1,1 +1,3 @@
-console.log("Hello webpack!");
+import router from "./routes";
+
+window.addEventListener("load", router);
